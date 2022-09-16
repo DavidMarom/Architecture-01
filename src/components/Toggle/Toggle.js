@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Container, Knoba, Knobb } from "./Toggle.style"
 
-// Redux
-
 function Toggle({ color, func }) {
     const [toggle, setToggle] = useState(false)
 
