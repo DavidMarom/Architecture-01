@@ -1,20 +1,26 @@
 import React, { useState } from 'react'
+import { NavContainer } from './TopNav.styles'
+
+// Components
 import Toggle from '../Toggle/Toggle'
-import { Container } from './TopNav.styles'
 
-export default function TopNav({ darkMode }) {
-    console.log('Top bar loaded')
+// Redux
+import { useDispatch, useSelector } from 'react-redux'
+import { darkToggle } from '../../features/settings/settingsSlice'
 
-    const func = () =>{
-        console.log('func activated')
-    }
+
+export default function TopNav() {
+    const dispatch = useDispatch()
+    const isDark = useSelector(state => state.settings.dark)
+    const [toggle, setToggle] = useState(false)
+
+
+
 
     return (
-        <Container darkMode={darkMode}>
-            <Toggle color="#ff0000" func={func}/>
-            <Toggle color="#ffff00" />
-            <Toggle color="#ff00ff" />
-
-        </Container>
+        <NavContainer darkMode={toggle} >
+            <Toggle color="#00aaff" func={() => { setToggle(!toggle); dispatch(darkToggle()) }} />
+            <h1>{isDark ? 'a' : 'b'}</h1>
+        </NavContainer>
     )
 }

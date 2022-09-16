@@ -6,6 +6,7 @@ export const Container = styled.div`
   border-radius: 50px;
   background-color: #000000;
   padding: 5px;
+  cursor: pointer;
 `;
 
 export const Knoba = styled.div`

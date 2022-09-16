@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const DARK = '#777777';
 const LIGHT = '#dddddd';
 
-export const Container = styled.div`
+export const NavContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
