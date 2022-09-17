@@ -1,16 +1,15 @@
 import React from 'react'
 import { PageContainer } from './PageComp.styles'
-import { fakestoreGet } from '../../services/http'
-
-// Components
 
 // Redux
 import { useSelector } from 'react-redux'
 
-fakestoreGet();
 
 export const PageComp01 = () => {
     const isDark = useSelector(state => state.settings.dark)
+    const items = useSelector(state => state.items.items )
+
+    console.log(333, items)
 
     return (
         <PageContainer darkMode={isDark} >

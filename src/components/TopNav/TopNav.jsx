@@ -18,7 +18,6 @@ export default function TopNav() {
     const dispatch = useDispatch()
     const isDark = useSelector(state => state.settings.dark)
     const { value } = useContext(PageContext);
-    console.log(value)
 
     return (
         <NavContainer darkMode={isDark} >
@@ -29,7 +28,7 @@ export default function TopNav() {
                 <TopNavItem><Link to="/page02"><p>Page 02</p></Link></TopNavItem>
             </Row>
             <Row>
-                <Toggle color="#00aaff" func={() => { dispatch(darkToggle()) }} />
+                <Toggle color="#00aaff" func={() => { dispatch(darkToggle()) }} symbol={isDark ? '🌒' : '☀️'} />
             </Row>
         </NavContainer>
     )

@@ -10,6 +10,8 @@ export const Container = styled.div`
 `;
 
 export const Knoba = styled.div`
+  z-index:2;
+
   width: 20px;
   height: 20px;
   background-color: ${({ color }) => color};
@@ -29,6 +31,8 @@ export const Knoba = styled.div`
 `;
 
 export const Knobb = styled.div`
+  z-index:2;
+
   width: 20px;
   height: 20px;
   background-color: #aaaaaa;
@@ -47,3 +51,11 @@ export const Knobb = styled.div`
   100% {margin-left: 0px; background-color: #aaaaaa; width: 20px}
 }
 `;
+
+export const Symb = styled.div`
+  z-index:1;
+  position: absolute;
+  display: flex;
+  padding-left:27px;
+  color: #ffffff;
+`
