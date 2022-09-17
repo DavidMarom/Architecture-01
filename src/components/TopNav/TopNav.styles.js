@@ -9,4 +9,6 @@ export const NavContainer = styled.div`
   justify-content: space-between;
   height: 100px;
   background-color: ${({ darkMode }) => (darkMode ? `${DARK}` : `${LIGHT}`)};
+  padding-left: 20px;
+  padding-right: 20px;
 `

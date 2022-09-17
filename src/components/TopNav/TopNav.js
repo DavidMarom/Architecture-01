@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavContainer } from './TopNav.styles'
-
+import { Row, TopNavItem } from '../StyledComponents'
 // Components
 import Toggle from '../Toggle/Toggle'
 
@@ -16,8 +16,16 @@ export default function TopNav() {
 
     return (
         <NavContainer darkMode={isDark} >
-            <Toggle color="#00aaff" func={() => { dispatch(darkToggle()) }} />
-            <h1>{isDark ? 'dark' : 'light'}</h1>
+            <h1>Logo</h1>
+            <Row>
+                <TopNavItem>Page 01</TopNavItem>
+                <TopNavItem>Page 02</TopNavItem>
+                <TopNavItem>Page 03</TopNavItem>
+
+            </Row>
+            <Row>
+                <Toggle color="#00aaff" func={() => { dispatch(darkToggle()) }} />
+            </Row>
         </NavContainer>
     )
 }
