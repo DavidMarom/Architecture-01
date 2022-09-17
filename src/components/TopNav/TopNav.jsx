@@ -5,7 +5,6 @@ import { NavContainer } from './TopNav.styles'
 import { Row, TopNavItem } from '../StyledComponents'
 
 import { Link } from "react-router-dom";
-import { BrowserRouter as Router } from 'react-router-dom'
 
 // Components
 import Toggle from '../Toggle/Toggle'
@@ -25,10 +24,9 @@ export default function TopNav() {
         <NavContainer darkMode={isDark} >
             <h1>Logo</h1>
             <Row>
-                <Router>
-                    <TopNavItem><Link to="/"><p>Page 02</p></Link></TopNavItem>
-                    <TopNavItem><Link to="/page01"><p>Page 01</p></Link></TopNavItem>
-                </Router>
+                <TopNavItem><Link to="/page00"><p>Page 00</p></Link></TopNavItem>
+                <TopNavItem><Link to="/page01"><p>Page 01</p></Link></TopNavItem>
+                <TopNavItem><Link to="/page02"><p>Page 02</p></Link></TopNavItem>
             </Row>
             <Row>
                 <Toggle color="#00aaff" func={() => { dispatch(darkToggle()) }} />
