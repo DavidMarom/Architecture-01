@@ -1,6 +1,12 @@
-import React from 'react'
+import { useContext } from 'react'
+import { PageContext } from "../../Context.jsx"
+
 import { NavContainer } from './TopNav.styles'
 import { Row, TopNavItem } from '../StyledComponents'
+
+import { Link } from "react-router-dom";
+import { BrowserRouter as Router } from 'react-router-dom'
+
 // Components
 import Toggle from '../Toggle/Toggle'
 
@@ -12,16 +18,17 @@ import { darkToggle } from '../../features/settings/settingsSlice'
 export default function TopNav() {
     const dispatch = useDispatch()
     const isDark = useSelector(state => state.settings.dark)
-
+    const { value } = useContext(PageContext);
+    console.log(value)
 
     return (
         <NavContainer darkMode={isDark} >
             <h1>Logo</h1>
             <Row>
-                <TopNavItem>Page 01</TopNavItem>
-                <TopNavItem>Page 02</TopNavItem>
-                <TopNavItem>Page 03</TopNavItem>
-
+                <Router>
+                    <TopNavItem><Link to="/"><p>Page 02</p></Link></TopNavItem>
+                    <TopNavItem><Link to="/page01"><p>Page 01</p></Link></TopNavItem>
+                </Router>
             </Row>
             <Row>
                 <Toggle color="#00aaff" func={() => { dispatch(darkToggle()) }} />

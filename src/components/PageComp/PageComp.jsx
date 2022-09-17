@@ -4,15 +4,16 @@ import { PageContainer } from './PageComp.styles'
 // Components
 
 // Redux
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
-export default function PageComp() {
-    const dispatch = useDispatch()
+export const PageComp = () => {
     const isDark = useSelector(state => state.settings.dark)
 
 
     return (
         <PageContainer darkMode={isDark} >
+            <h1>Page 02</h1>
+
         </PageContainer>
     )
 }
