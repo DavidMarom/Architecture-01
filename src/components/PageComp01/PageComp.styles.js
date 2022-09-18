@@ -9,4 +9,5 @@ export const PageContainer = styled.div`
   justify-content: space-between;
   height: 80vh;
   background-color: ${({ darkMode }) => (darkMode ? `${DARK}` : `${LIGHT}`)};
+  padding:20px;
 `

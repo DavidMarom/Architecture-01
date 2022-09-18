@@ -11,15 +11,17 @@ export const PageComp01 = () => {
     const items = useSelector(state => state.items.items)
     const ready = useSelector(state => state.items.isLoading)
 
-    useEffect(() => { dispatch(getItems()) }, [dispatch])
+    useEffect(() => {
+        dispatch(getItems())
+        console.log('fetching')
+    }, [dispatch])
 
-    console.log(444, items)
 
     if (items) {
         return (
             <PageContainer darkMode={isDark} >
                 <h1>Page 01</h1>
-                <p>{items[0].title}</p>
+                {items.map((item, idx) => <p key={idx}>{item.title}</p>)}
             </PageContainer>
         )
     }
