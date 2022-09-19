@@ -11,3 +11,14 @@ export const PageContainer = styled.div`
   background-color: ${({ darkMode }) => (darkMode ? `${DARK}` : `${LIGHT}`)};
   padding:20px;
 `
+
+export const Card = styled.div`
+  width: 100px;
+  height: 100px;
+`
+
+export const Img = styled.img`
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+`

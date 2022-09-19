@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { PageContainer } from './PageComp.styles'
 import { db } from '../../firebase-config'
 import { collection, getDocs } from 'firebase/firestore'
-
-// Components
-
-// Redux
 import { useSelector } from 'react-redux'
 
 export const PageComp02 = () => {
