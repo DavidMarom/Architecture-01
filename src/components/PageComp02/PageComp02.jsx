@@ -19,7 +19,6 @@ export const PageComp02 = () => {
         const getList = async () => {
             const data = await getDocs(listCollectionRef);
             setItems(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-            console.log(items)
         }
         getList()
     }, [])
