@@ -8,22 +8,24 @@ import { updateItem, deleteItem } from '../../services/fireStore'
 
 export const PageComp02 = () => {
     const dispatch = useDispatch();
-    
+
     const items = useSelector(state => state.list.list)
     const isDark = useSelector(state => state.settings.dark)
-    const [newItem, setNewItem] = useState()
+    const [newItem, setNewItem] = useState('')
 
     const handleCreateNew = () => {
         dispatch(addItemToList(newItem));
         dispatch(getList())
-        setNewItem("")
     }
 
     const handleDeleteItem = async (id) => {
         await deleteItem(id);
     }
 
-    useEffect(() => { dispatch(getList()) }, [dispatch])
+    useEffect(() => {
+        dispatch(getList());
+        setNewItem("")
+    }, [dispatch])
 
     if (items) {
         return (

@@ -4,8 +4,7 @@ import { fetchList, createNew } from '../../services/fireStore'
 export const getList = createAsyncThunk(
     'list/getList', async () => {
         try {
-            const response = await fetchList()
-            return response
+            return await fetchList()
         }
         catch (err) {
             return err.message
@@ -15,9 +14,7 @@ export const getList = createAsyncThunk(
 export const addItemToList = createAsyncThunk(
     'list/addItemToList', async (newItem) => {
         try {
-            createNew(newItem.payload);
-            return newItem.payload;
-
+            return await createNew(newItem);
         }
         catch (err) {
             return err.message
@@ -47,8 +44,7 @@ export const listSlice = createSlice({
             state.isLoading = true;
         },
         [addItemToList.fulfilled]: (state, action) => {
-            createNew(action.meta.arg);
-            state.list.push(action.meta.arg);
+            // state.list.push(action.meta.arg);
             state.isLoading = false;
         },
         [addItemToList.rejected]: (state) => {
