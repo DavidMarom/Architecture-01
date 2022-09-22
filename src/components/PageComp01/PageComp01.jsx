@@ -22,7 +22,7 @@ export const PageComp01 = () => {
                 <h1>Page 01</h1>
                 {/* {items.map((item, idx) => <p key={idx}>{item.title}</p>)} */}
                 {items.map((item, idx) =>
-                    <Card>
+                    <Card key={idx}>
                         <Img src={item.image} key={idx} alt="" />
                     </Card>
 
