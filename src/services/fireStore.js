@@ -3,7 +3,7 @@ import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc } from 'firebase
 
 const listCollectionRef = collection(db, "list")
 
-export function getList() {
+export function fetchList() {
     return getDocs(listCollectionRef).then((res) => {
         return res.docs.map(
             (doc) => { return { ...doc.data(), id: doc.id } }

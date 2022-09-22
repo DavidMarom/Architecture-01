@@ -1,39 +1,45 @@
 import React, { useState, useEffect } from 'react'
 import { PageContainer } from './PageComp.styles'
-import { useSelector } from 'react-redux'
-import { getList, createNew, updateItem, deleteItem } from '../../services/fireStore'
+import { getList, addItemToList } from '../../features/list/listSlice'
+
+// Redux
+import { useSelector, useDispatch } from 'react-redux'
+import { updateItem, deleteItem } from '../../services/fireStore'
 
 export const PageComp02 = () => {
+    const dispatch = useDispatch();
+    
+    const items = useSelector(state => state.list.list)
     const isDark = useSelector(state => state.settings.dark)
-    const [items, setItems] = useState([])
     const [newItem, setNewItem] = useState()
 
     const handleCreateNew = () => {
-        createNew(newItem)
+        dispatch(addItemToList(newItem));
+        dispatch(getList())
         setNewItem("")
     }
 
-    const handleSeleteItem = async (id) => {
+    const handleDeleteItem = async (id) => {
         await deleteItem(id);
     }
 
-    useEffect(() => {
-        getList().then(ggg => setItems(ggg))
-    }, [])
+    useEffect(() => { dispatch(getList()) }, [dispatch])
 
-    return (
-        <PageContainer darkMode={isDark} >
-            <input type="text" onChange={(ev) => { setNewItem(ev.target.value) }} />
-            <button onClick={handleCreateNew}>Add</button>
+    if (items) {
+        return (
+            <PageContainer darkMode={isDark} >
+                <input type="text" onChange={(ev) => { setNewItem(ev.target.value) }} />
+                <button onClick={handleCreateNew}>Add</button>
 
-            {items.map((item, idx) => {
-                return <div key={idx}>
-                    <p>{item.item01}</p>
-                    <button onClick={() => { updateItem(item.id) }}>Update</button>
-                    <button onClick={() => { handleSeleteItem(item.id) }}>Delete</button>
-                </div>
-            })}
+                {items.map((item, idx) => {
+                    return <div key={idx}>
+                        <p>{item.item01}</p>
+                        <button onClick={() => { updateItem(item.id) }}>Update</button>
+                        <button onClick={() => { handleDeleteItem(item.id) }}>Delete</button>
+                    </div>
+                })}
 
-        </PageContainer >
-    )
+            </PageContainer >
+        )
+    } else return <p>Loading</p>
 }

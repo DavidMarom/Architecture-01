@@ -12,7 +12,6 @@ export const PageComp01 = () => {
 
     useEffect(() => {
         dispatch(getItems())
-        console.log('fetching')
     }, [dispatch])
 
 
