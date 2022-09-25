@@ -23,7 +23,7 @@ export default function TopNav() {
         <NavContainer darkMode={isDark} >
             <h1>Logo</h1>
             <Row>
-                <TopNavItem><Link to="/page00"><p>Page 00</p></Link></TopNavItem>
+                <TopNavItem><Link to="/antd"><p>Antd</p></Link></TopNavItem>
                 <TopNavItem><Link to="/page01"><p>Page 01</p></Link></TopNavItem>
                 <TopNavItem><Link to="/page02"><p>Page 02</p></Link></TopNavItem>
             </Row>
