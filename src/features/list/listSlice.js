@@ -44,7 +44,7 @@ export const listSlice = createSlice({
             state.isLoading = true;
         },
         [addItemToList.fulfilled]: (state, action) => {
-            // state.list.push(action.meta.arg);
+            state.list.push(action.meta.arg);
             state.isLoading = false;
         },
         [addItemToList.rejected]: (state) => {

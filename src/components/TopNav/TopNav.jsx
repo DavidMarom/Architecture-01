@@ -24,8 +24,8 @@ export default function TopNav() {
             <h1>Logo</h1>
             <Row>
                 <TopNavItem><Link to="/antd"><p>Antd</p></Link></TopNavItem>
+                <TopNavItem><Link to="/form"><p>Form</p></Link></TopNavItem>
                 <TopNavItem><Link to="/page01"><p>Page 01</p></Link></TopNavItem>
-                <TopNavItem><Link to="/page02"><p>Page 02</p></Link></TopNavItem>
             </Row>
             <Row>
                 <Toggle color="#00aaff" func={() => { dispatch(darkToggle()) }} symbol={isDark ? '🌒' : '☀️'} />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageContainer } from './PageComp.styles'
+import { PageContainer } from './AntD.styles'
 import { useSelector } from 'react-redux'
 import { Button, Table } from 'antd'
 
@@ -43,8 +43,7 @@ export const AntD = () => {
 
     return (
         <PageContainer darkMode={isDark} >
-            <h1>AntD</h1>
-            <Button type="primary">Primary</Button>
+            <p>AntD</p>
             <Table dataSource={dataSource} columns={columns} />;
         </PageContainer>
     )

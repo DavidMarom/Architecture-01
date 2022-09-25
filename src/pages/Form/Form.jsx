@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { PageContainer } from './PageComp.styles'
+import { PageContainer } from './Form.styles'
 import { getList, addItemToList } from '../../features/list/listSlice'
 
 // Redux
 import { useSelector, useDispatch } from 'react-redux'
 import { updateItem, deleteItem } from '../../services/fireStore'
 
-export const PageComp02 = () => {
+export const Form = () => {
     const dispatch = useDispatch();
 
     const items = useSelector(state => state.list.list)
