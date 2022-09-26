@@ -3,28 +3,29 @@ import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc } from 'firebase
 
 const listCollectionRef = collection(db, "list")
 
-export function fetchList() {
-    return getDocs(listCollectionRef).then((res) => {
+export const FSfetchList = async () => {
+    return await getDocs(listCollectionRef).then((res) => {
         return res.docs.map(
             (doc) => { return { ...doc.data(), id: doc.id } }
         )
     })
 }
 
-export const createNew = async (newItem) => {
-    await addDoc(listCollectionRef, {
-        item01: newItem
-    })
+export const FScreateNew = async (newItem) => {
+    await addDoc(listCollectionRef, newItem
+    )
 }
 
-export const updateItem = async (id) => {
+export const FSupdateItem = async (id) => {
     const itemDoc = doc(db, "list", id)
     const newFields = { item01: 'aaaaaaaaaa' }
     await updateDoc(itemDoc, newFields);
+    return id;
 }
 
-export const deleteItem = async (id) => {
+export const FSdeleteItem = async (id) => {
     const itemDoc = doc(db, "list", id)
     await deleteDoc(itemDoc);
+    return id;
 }
 
