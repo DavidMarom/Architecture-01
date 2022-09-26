@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { PageContext } from "./Context";
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css'
 
 import TopNav from './components/TopNav/TopNav'
 import { AntD } from './pages/AntD/AntD'
 import { PageComp01 } from './pages/PageComp01/PageComp01'
-import { Form } from './pages/Form/Form'
+import { AddItemForm } from './pages/Form/Form'
 import { useDispatch } from 'react-redux'
 
 import { getList } from './features/list/listSlice'
@@ -27,7 +27,7 @@ function App() {
           <Routes>
             <Route path="/antd" element={<AntD />} />
             <Route path="/page01" element={<PageComp01 />} />
-            <Route path="/form" element={<Form />} />
+            <Route path="/form" element={<AddItemForm />} />
           </Routes>
         </ Router>
       </div>

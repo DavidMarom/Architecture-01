@@ -1,29 +1,44 @@
-import React, { useState } from 'react'
-import { PageContainer } from './Form.styles'
+import React from 'react'
+import { PageContainer, Error } from './Form.styles'
 import { getList, addItemToList, updateItem, deleteItem } from '../../features/list/listSlice'
 import { useSelector, useDispatch } from 'react-redux'
+import { useFormik } from 'formik'
+import * as Yup from 'yup'
 
-export const Form = () => {
+export const AddItemForm = () => {
     const dispatch = useDispatch();
 
     const items = useSelector(state => state.list.list)
     const isDark = useSelector(state => state.settings.dark)
-    const [newName, setNewName] = useState('')
-    const [newAge, setNewAge] = useState('')
-    const [newAddress, setNewAddress] = useState('')
 
-    const handleCreateNew = () => {
+
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            age: '',
+            address: '',
+        },
+        validationSchema: Yup.object({
+            name: Yup.string().max(10, 'Must be 10 characters or less').required('Required'),
+            age: Yup.number().required('Required'),
+            address: Yup.string().required('Required'),
+        }),
+        onSubmit: (values, { resetForm }) => {
+            handleCreateNew(values)
+            resetForm();
+        }
+    })
+
+    const handleCreateNew = (values) => {
+
         dispatch(addItemToList(
             {
-                name: newName,
-                age: newAge,
-                address: newAddress
+                name: values.name,
+                age: values.age,
+                address: values.address,
             }
         ));
         dispatch(getList())
-        setNewName("")
-        setNewAge("")
-        setNewAddress("")
     }
 
     const handleDeleteItem = async (id) => {
@@ -39,10 +54,47 @@ export const Form = () => {
     if (items) {
         return (
             <PageContainer darkMode={isDark} >
-                <input type="text" onChange={(ev) => { setNewName(ev.target.value) }} />
-                <input type="text" onChange={(ev) => { setNewAge(ev.target.value) }} />
-                <input type="text" onChange={(ev) => { setNewAddress(ev.target.value) }} />
-                <button onClick={handleCreateNew}>Add</button>
+                <form onSubmit={formik.handleSubmit}>
+
+                    <div className="imput-container">
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            placeholder="Name"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.name}
+                        />
+                        {formik.touched.name && formik.errors.name ? (<Error>{formik.errors.name}</Error>) : null}
+                    </div>
+                    <div className="imput-container">
+                        <input
+                            id="age"
+                            name="age"
+                            type="number"
+                            placeholder="Age"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.age}
+                        />
+                        {formik.touched.age && formik.errors.age ? (<Error>{formik.errors.age}</Error>) : null}
+                    </div>
+                    <div className="imput-container">
+                        <input
+                            id="address"
+                            name="address"
+                            type="text"
+                            placeholder="address"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.address}
+                        />
+                        {formik.touched.address && formik.errors.address ? (<Error>{formik.errors.address}</Error>) : null}
+                    </div>
+
+                    <button type="submit">Add</button>
+                </form>
 
                 {items.map((item, idx) => {
                     return <div key={idx}>

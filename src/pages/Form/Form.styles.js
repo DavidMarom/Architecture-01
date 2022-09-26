@@ -10,3 +10,8 @@ export const PageContainer = styled.div`
   height: 80vh;
   background-color: ${({ darkMode }) => (darkMode ? `${DARK}` : `${LIGHT}`)};
 `
+
+export const Error = styled.p`
+  font-size: 0.5rem;
+  color: red;
+`
