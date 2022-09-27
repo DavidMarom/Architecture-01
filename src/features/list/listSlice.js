@@ -15,9 +15,9 @@ export const getList = createAsyncThunk(
     });
 
 export const updateItem = createAsyncThunk(
-    'list/updateItem', async (id) => {
+    'list/updateItem', async (payLoad) => {
         try {
-            return await FSupdateItem(id);
+            return await FSupdateItem(payLoad);
         }
         catch (err) {
             return err.message

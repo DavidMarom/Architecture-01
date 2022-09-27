@@ -30,7 +30,6 @@ export const AddItemForm = () => {
     })
 
     const handleCreateNew = (values) => {
-
         dispatch(addItemToList(
             {
                 name: values.name,
@@ -46,8 +45,8 @@ export const AddItemForm = () => {
         dispatch(getList())
     }
 
-    const handleUpdateItem = async (id) => {
-        dispatch(updateItem(id));
+    const handleUpdateItem = async (id, name) => {
+        dispatch(updateItem(id, name));
         dispatch(getList())
     }
 

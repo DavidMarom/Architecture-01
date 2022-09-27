@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { PageContext } from "./Context";
 import 'antd/dist/antd.min.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import TopNav from './components/TopNav/TopNav'
 import { AntD } from './pages/AntD/AntD'
+
+// Pages
 import { PageComp01 } from './pages/PageComp01/PageComp01'
 import { AddItemForm } from './pages/Form/Form'
 import { useDispatch } from 'react-redux'
 
 import { getList } from './features/list/listSlice'
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App() {
   const dispatch = useDispatch();

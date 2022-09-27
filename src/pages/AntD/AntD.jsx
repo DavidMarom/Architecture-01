@@ -1,8 +1,8 @@
 import React from 'react'
 import { PageContainer } from './AntD.styles'
 import { useSelector } from 'react-redux'
-import { Table } from 'antd'
-
+import { Table, Pagination } from 'antd'
+import { columns } from './columns'
 
 export const AntD = () => {
     const isDark = useSelector(state => state.settings.dark)
@@ -10,33 +10,18 @@ export const AntD = () => {
     const orgDataSource = useSelector(state => state.list.list)
     const dataSource = orgDataSource.map((item, index) => { return { ...item, key: index } })
 
-
-    const columns = [
-        {
-            title: 'Name',
-            dataIndex: 'name',
-            key: 'name',
-        },
-        {
-            title: 'Age',
-            sortable: true,
-            dataIndex: 'age',
-            key: 'age',
-        },
-        {
-            title: 'Address',
-            dataIndex: 'address',
-            key: 'address',
-        },
-    ];
-
-
     return (
         <PageContainer darkMode={isDark} >
             <p>AntD</p>
             <Table
                 dataSource={dataSource}
-                columns={columns} />
+                columns={columns}
+                size={'small'}
+                loading={orgDataSource.length === 0}
+            >
+                <Pagination total={3} />
+            </Table>
+
         </PageContainer>
     )
 }
