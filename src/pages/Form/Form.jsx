@@ -7,10 +7,8 @@ import * as Yup from 'yup'
 
 export const AddItemForm = () => {
     const dispatch = useDispatch();
-
     const items = useSelector(state => state.list.list)
     const isDark = useSelector(state => state.settings.dark)
-
 
     const formik = useFormik({
         initialValues: {

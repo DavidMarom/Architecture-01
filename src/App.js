@@ -7,7 +7,7 @@ import TopNav from './components/TopNav/TopNav'
 import { AntD } from './pages/AntD/AntD'
 
 // Pages
-import { PageComp01 } from './pages/PageComp01/PageComp01'
+import { FakeStore } from './pages/FakeStore/FakeStore'
 import { AddItemForm } from './pages/Form/Form'
 import { useDispatch } from 'react-redux'
 
@@ -26,8 +26,8 @@ function App() {
         <Router>
           <TopNav />
           <Routes>
-            <Route path="/antd" element={<AntD />} />
-            <Route path="/page01" element={<PageComp01 />} />
+            <Route path="/" element={<AntD />} />
+            <Route path="/fakestore" element={<FakeStore />} />
             <Route path="/form" element={<AddItemForm />} />
           </Routes>
         </ Router>

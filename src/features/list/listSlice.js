@@ -5,9 +5,7 @@ export const getList = createAsyncThunk(
     'list/getList', async () => {
         try {
             const aaa = await FSfetchList();
-            console.log(333, aaa)
             return aaa;
-
         }
         catch (err) {
             return err.message

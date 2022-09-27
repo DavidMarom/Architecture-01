@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
-import { PageContainer, Card, Img } from './PageComp.styles'
+import { PageContainer, Card, Img, ItemsContainer } from './FakeStore.styles'
 import { getItems } from '../../features/items/itemsSlice'
 
 // Redux
 import { useSelector, useDispatch } from 'react-redux'
-export const PageComp01 = () => {
+
+export const FakeStore = () => {
     const dispatch = useDispatch();
 
     const isDark = useSelector(state => state.settings.dark)
@@ -14,19 +15,19 @@ export const PageComp01 = () => {
         dispatch(getItems())
     }, [dispatch])
 
-
     if (items) {
         return (
             <PageContainer darkMode={isDark} >
-                <h1>Page 01</h1>
-                {/* {items.map((item, idx) => <p key={idx}>{item.title}</p>)} */}
-                {items.map((item, idx) =>
-                    <Card key={idx}>
-                        <Img src={item.image} key={idx} alt="" />
-                    </Card>
+                <p>Http request to fakestoreapi.com</p>
+                <ItemsContainer>
 
-                )
-                }
+                    {items.map((item, idx) =>
+                        <Card key={idx}>
+                            <Img src={item.image} key={idx} alt="" />
+                        </Card>
+                    )
+                    }
+                </ItemsContainer>
             </PageContainer>
         )
     }

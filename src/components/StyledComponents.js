@@ -9,3 +9,10 @@ export const Row = styled.div`
 export const TopNavItem = styled.div`
     padding: 5px;
 `
+
+export const Col = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+`

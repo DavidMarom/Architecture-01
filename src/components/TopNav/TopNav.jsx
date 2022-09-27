@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import { PageContext } from "../../Context.jsx"
 
-import { NavContainer } from './TopNav.styles'
-import { Row, TopNavItem } from '../StyledComponents'
+import { NavContainer, Img } from './TopNav.styles'
+import { Row, TopNavItem, Col } from '../StyledComponents'
 
 import { Link } from "react-router-dom";
 
@@ -21,11 +21,13 @@ export default function TopNav() {
 
     return (
         <NavContainer darkMode={isDark} >
-            <h1>Logo</h1>
+            <Col>
+                <Img src="logo192.png" alt="David Marom"></Img>
+            </Col>
             <Row>
-                <TopNavItem><Link to="/antd"><p>Antd</p></Link></TopNavItem>
+                <TopNavItem><Link to="/"><p>Antd</p></Link></TopNavItem>
                 <TopNavItem><Link to="/form"><p>Form</p></Link></TopNavItem>
-                <TopNavItem><Link to="/page01"><p>Page 01</p></Link></TopNavItem>
+                <TopNavItem><Link to="/FakeStore"><p>Fake Store</p></Link></TopNavItem>
             </Row>
             <Row>
                 <Toggle color="#00aaff" func={() => { dispatch(darkToggle()) }} symbol={isDark ? '🌒' : '☀️'} />

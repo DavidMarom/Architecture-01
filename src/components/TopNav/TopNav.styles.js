@@ -12,3 +12,8 @@ export const NavContainer = styled.div`
   padding-left: 20px;
   padding-right: 20px;
 `
+
+export const Img = styled.img`
+  width:50px;
+  height:50px;
+`
