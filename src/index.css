@@ -16,3 +16,14 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.active-route{
+  color: #545454;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.inactive-route{
+  color: #3e3e3e;
+  padding: 5px;
+}

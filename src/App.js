@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import { PageContext } from "./Context";
 import 'antd/dist/antd.min.css'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
+// Components
 import TopNav from './components/TopNav/TopNav'
-import { AntD } from './pages/AntD/AntD'
 
 // Pages
+import { AntD } from './pages/AntD/AntD'
 import { FakeStore } from './pages/FakeStore/FakeStore'
 import { AddItemForm } from './pages/Form/Form'
+import { Home } from './pages/Home/Home'
+
 import { useDispatch } from 'react-redux'
 
 import { getList } from './features/list/listSlice'
@@ -17,22 +19,16 @@ function App() {
   const dispatch = useDispatch();
   dispatch(getList())
 
-  const [value, setValue] = useState("/");
-
   return (
-    <PageContext.Provider value={{ value, setValue }}>
-
       <div className="overall-layout">
-        <Router>
-          <TopNav />
-          <Routes>
-            <Route path="/" element={<AntD />} />
-            <Route path="/fakestore" element={<FakeStore />} />
-            <Route path="/form" element={<AddItemForm />} />
-          </Routes>
-        </ Router>
+        <TopNav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/fakestore" element={<FakeStore />} />
+          <Route path="/form" element={<AddItemForm />} />
+          <Route path="/antd" element={<AntD />} />
+        </Routes>
       </div>
-    </PageContext.Provider>
   );
 }
 
