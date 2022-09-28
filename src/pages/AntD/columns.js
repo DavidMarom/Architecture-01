@@ -18,11 +18,18 @@ export const columns = [
         sorter: (a, b) => a.age - b.age,
         dataIndex: 'age',
         key: 'age',
+        width: '15%',
     },
     {
         title: 'Address',
         dataIndex: 'address',
         key: 'address',
+        width: '20%',
+        filters: [
+            { text: 'Jerusalem', value: 'Jerusalem' },
+            { text: 'TLV', value: 'TLV' },
+        ],
+        onFilter: (value, record) => record.address.indexOf(value) === 0,
     },
     {
         title: 'Action',

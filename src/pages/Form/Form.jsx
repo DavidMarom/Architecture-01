@@ -1,6 +1,6 @@
 import React from 'react'
 import { PageContainer, Error } from './Form.styles'
-import { getList, addItemToList, updateItem, deleteItem } from '../../features/list/listSlice'
+import { getList, addItemToList, updateItem } from '../../features/list/listSlice'
 import { useSelector, useDispatch } from 'react-redux'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
@@ -35,11 +35,6 @@ export const AddItemForm = () => {
                 address: values.address,
             }
         ));
-        dispatch(getList())
-    }
-
-    const handleDeleteItem = async (id) => {
-        dispatch(deleteItem(id))
         dispatch(getList())
     }
 
@@ -97,7 +92,6 @@ export const AddItemForm = () => {
                     return <div key={idx}>
                         <p>{item.name} - {item.age} - {item.address} - {item.id}</p>
                         <button onClick={() => { handleUpdateItem(item.id) }}>Update</button>
-                        <button onClick={() => { handleDeleteItem(item.id) }}>Delete</button>
                     </div>
                 })}
 

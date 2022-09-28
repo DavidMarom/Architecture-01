@@ -7,7 +7,7 @@ export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
-  height: 80vh;
+  /* height: 80vh; */
   padding: 20px;
   background-color: ${({ darkMode }) => (darkMode ? `${DARK}` : `${LIGHT}`)};
 `
