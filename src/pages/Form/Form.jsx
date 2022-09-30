@@ -1,20 +1,18 @@
 import React from 'react'
-import { PageContainer, Error } from './Form.styles'
+import { Error,Form } from './Form.styles'
 import { getList, addItemToList, updateItem } from '../../features/list/listSlice'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 
-export const AddItemForm = () => {
+export const AddItemForm = ({ data }) => {
     const dispatch = useDispatch();
-    const items = useSelector(state => state.list.list)
-    const isDark = useSelector(state => state.settings.dark)
-
     const formik = useFormik({
         initialValues: {
-            name: '',
-            age: '',
-            address: '',
+            name: data ? data.name : '',
+            age: data ? data.age : '',
+            address: data ? data.address : '',
+            id: data ? data.id : ''
         },
         validationSchema: Yup.object({
             name: Yup.string().max(10, 'Must be 10 characters or less').required('Required'),
@@ -22,31 +20,33 @@ export const AddItemForm = () => {
             address: Yup.string().required('Required'),
         }),
         onSubmit: (values, { resetForm }) => {
-            handleCreateNew(values)
+            console.log('aaaa')
             resetForm();
+            dispatch(updateItem(values));
         }
     })
 
-    const handleCreateNew = (values) => {
-        dispatch(addItemToList(
-            {
-                name: values.name,
-                age: values.age,
-                address: values.address,
-            }
-        ));
-        dispatch(getList())
-    }
+    // const handleCreateNew = (values) => {
+    //     dispatch(addItemToList(
+    //         {
+    //             name: values.name,
+    //             age: values.age,
+    //             address: values.address,
+    //         }
+    //     ));
+    //     dispatch(getList())
+    // }
 
-    const handleUpdateItem = async (id, name) => {
-        dispatch(updateItem(id, name));
-        dispatch(getList())
-    }
+    // const handleUpdateItem = (values) => {
+    //     dispatch(updateItem(
+    //         { ...values, id: data.id }
+    //     ));
+    //     dispatch(getList())
+    // }
 
-    if (items) {
         return (
-            <PageContainer darkMode={isDark} >
-                <form onSubmit={formik.handleSubmit}>
+            <>
+                <Form onSubmit={formik.handleSubmit}>
 
                     <div className="imput-container">
                         <input
@@ -85,17 +85,16 @@ export const AddItemForm = () => {
                         {formik.touched.address && formik.errors.address ? (<Error>{formik.errors.address}</Error>) : null}
                     </div>
 
-                    <button type="submit">Add</button>
-                </form>
+                    <button type="submit">Edit</button>
+                </Form>
 
-                {items.map((item, idx) => {
+
+                {/* {items.map((item, idx) => {
                     return <div key={idx}>
                         <p>{item.name} - {item.age} - {item.address} - {item.id}</p>
-                        <button onClick={() => { handleUpdateItem(item.id) }}>Update</button>
                     </div>
-                })}
+                })} */}
 
-            </PageContainer >
+            </>
         )
-    } else return <p>Loading</p>
 }

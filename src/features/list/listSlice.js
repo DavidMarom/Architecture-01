@@ -1,6 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { FSfetchList, FScreateNew, FSupdateItem, FSdeleteItem } from '../../services/fireStore'
 
+
+
 export const getList = createAsyncThunk(
     'list/getList', async () => {
         try {
@@ -46,7 +48,11 @@ export const listSlice = createSlice({
     name: 'list',
     initialState: {
         list: [],
+        editDialog: null,
         isLoading: false
+    },
+    reducers: {
+        openEditDialog: (state, data) => { state.editDialog = data.payload },
     },
     extraReducers: {
         // getList
@@ -98,5 +104,7 @@ export const listSlice = createSlice({
         },
     }
 })
+
+export const { openEditDialog } = listSlice.actions
 
 export default listSlice.reducer

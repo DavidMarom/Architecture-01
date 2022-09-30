@@ -11,3 +11,9 @@ export const PageContainer = styled.div`
   padding: 20px;
   background-color: ${({ darkMode }) => (darkMode ? `${DARK}` : `${LIGHT}`)};
 `
+
+export const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+`

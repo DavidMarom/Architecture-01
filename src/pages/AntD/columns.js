@@ -1,6 +1,6 @@
 import { Button, Popconfirm } from "antd";
 import store from '../../store'
-import { deleteItem, getList } from '../../features/list/listSlice'
+import { deleteItem, getList, openEditDialog } from '../../features/list/listSlice'
 
 const handleDelete = (id) => {
     store.dispatch(deleteItem(id))
@@ -35,10 +35,15 @@ export const columns = [
         title: 'Action',
         dataIndex: 'action',
         align: 'center',
+        width: '20%',
         render: (_, record) => (
-            <Popconfirm title="Sure to delete?" onConfirm={() => handleDelete(record.id)}>
-                <Button danger>Delete</Button>
-            </Popconfirm>
+            <>
+                <Popconfirm title="Sure to delete?" onConfirm={() => handleDelete(record.id)}>
+                    <Button danger>Delete</Button>
+                </Popconfirm>
+                <Button onClick={() => store.dispatch(openEditDialog(record))
+                }>Edit</Button>
+            </>
         )
     }
 ];

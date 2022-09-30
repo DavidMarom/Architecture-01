@@ -16,11 +16,15 @@ export const FScreateNew = async (newItem) => {
     )
 }
 
-export const FSupdateItem = async (id) => {
-    const itemDoc = doc(db, "list", id)
-    const newFields = { item01: 'aaaaaaaaaa' }
+export const FSupdateItem = async (data) => {
+    const itemDoc = doc(db, "list", data.id)
+    const newFields = {
+        name: data.name,
+        age: data.age,
+        address: data.address
+    }
     await updateDoc(itemDoc, newFields);
-    return id;
+    return data.id;
 }
 
 export const FSdeleteItem = async (id) => {

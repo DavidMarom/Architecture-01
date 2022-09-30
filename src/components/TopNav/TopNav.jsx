@@ -18,6 +18,7 @@ export default function TopNav() {
                 <NavLink to="/antd" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>AntD</p></NavLink>
                 <NavLink to="/form" className={ (navData )=> navData.isActive ? 'active-route' : 'inactive-route' }><p>Form</p></NavLink>
                 <NavLink to="/FakeStore" className={ (navData )=> navData.isActive ? 'active-route' : 'inactive-route' }><p>Fake Store</p></NavLink>
+                <NavLink to="/Login" className={ (navData )=> navData.isActive ? 'active-route' : 'inactive-route' }><p>Login</p></NavLink>
             </Row>
             <Row>
                 <Toggle color="#00aaff" func={() => { dispatch(darkToggle()) }} symbol={isDark ? '🌒' : '☀️'} />
