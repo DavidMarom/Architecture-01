@@ -5,15 +5,12 @@ import { Route, Routes } from 'react-router-dom'
 // Components
 import TopNav from './components/TopNav/TopNav'
 
-// Pages
 import { AntD } from './pages/AntD/AntD'
 import { FakeStore } from './pages/FakeStore/FakeStore'
 import { AddItemForm } from './pages/Form/Form'
 import { Home } from './pages/Home/Home'
 import { Login } from './pages/Login/Login'
-
 import { useDispatch } from 'react-redux'
-
 import { getList } from './features/list/listSlice'
 
 function App() {

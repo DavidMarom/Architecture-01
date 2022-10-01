@@ -17,3 +17,9 @@ export const Row = styled.div`
   flex-direction: row;
   justify-content: space-around;
 `
+
+export const Col = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+`
