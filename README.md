@@ -6,5 +6,7 @@
 - Redux with redux toolkit
 - Axios service
 - Firebase firestore
+- AntD table
+- Formik form
 
 Live demo: [https://arch-7d083.web.app/](https://arch-7d083.web.app/)
