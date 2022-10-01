@@ -16,4 +16,17 @@ export const NavContainer = styled.div`
 export const Img = styled.img`
   width:50px;
   height:50px;
+  cursor: pointer;
+`
+
+export const Img2 = styled.img`
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  cursor: pointer;
+`
+
+export const LoginBtn = styled.div`
+  margin-right: 20px;
 `
