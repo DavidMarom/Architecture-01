@@ -1,7 +1,6 @@
 import React from 'react'
-import { PageContainer } from './Home.styles'
+import { PageContainer, Col } from './Home.styles'
 import { useSelector } from 'react-redux'
-import { Col } from './Home.styles'
 import { Link } from "react-router-dom";
 
 export const Home = () => {
