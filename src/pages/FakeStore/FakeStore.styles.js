@@ -6,7 +6,7 @@ const LIGHT = '#cccccc';
 export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   height: 80vh;
   background-color: ${({ darkMode }) => (darkMode ? `${DARK}` : `${LIGHT}`)};
   padding:20px;

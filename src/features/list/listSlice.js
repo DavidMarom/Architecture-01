@@ -1,13 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { FSfetchList, FScreateNew, FSupdateItem, FSdeleteItem } from '../../services/fireStore'
 
-
-
 export const getList = createAsyncThunk(
     'list/getList', async () => {
         try {
-            const aaa = await FSfetchList();
-            return aaa;
+            return await FSfetchList();
+            ;
         }
         catch (err) {
             return err.message

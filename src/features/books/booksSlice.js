@@ -5,7 +5,6 @@ export const getBooks = createAsyncThunk(
     'books/getBooks', async () => {
         try {
             const response = await GetBooks()
-            console.log(222, response.data)
             return response.data
         }
         catch (err) {
@@ -16,18 +15,18 @@ export const getBooks = createAsyncThunk(
 export const booksSlice = createSlice({
     name: 'books',
     initialState: {
-        books: [{name: 'test'}],
+        books: [],
         isLoading: false
     },
     extraReducers: {
-        [GetBooks.pending]: (state) => {
+        [getBooks.pending]: (state) => {
             state.isLoading = true;
         },
-        [GetBooks.fulfilled]: (state, action) => {
-            state.items = action.payload;
+        [getBooks.fulfilled]: (state, action) => {
+            state.books = action.payload;
             state.isLoading = false;
         },
-        [GetBooks.rejected]: (state) => {
+        [getBooks.rejected]: (state) => {
             state.isLoading = false;
         }
     }

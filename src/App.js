@@ -14,11 +14,13 @@ import { Login } from './pages/Login/Login'
 import { useDispatch } from 'react-redux'
 import { getList } from './features/list/listSlice'
 import { getBooks } from './features/books/booksSlice'
+import { getItems } from './features/items/itemsSlice'
 
 function App() {
   const dispatch = useDispatch();
   dispatch(getList())
   dispatch(getBooks())
+  dispatch(getItems())
 
   return (
       <div className="overall-layout">

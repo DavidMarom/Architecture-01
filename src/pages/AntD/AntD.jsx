@@ -5,7 +5,6 @@ import { Table } from 'antd'
 import { AddItemForm } from '../Form/Form'
 import { columns } from './columns'
 
-
 export const AntD = () => {
     const isDark = useSelector(state => state.settings.dark)
     const editableItem = useSelector(state => state.list.editDialog)
@@ -33,8 +32,6 @@ export const AntD = () => {
                 }}
             >
             </Table>
-
-
         </PageContainer>
     )
 }

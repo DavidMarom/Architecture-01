@@ -1,7 +1,6 @@
 const axios = require('axios').default;
 
 export function GetBooks() {
-    console.log(111, 'GetBooks fired')
     return axios(
         {
             method: 'get',

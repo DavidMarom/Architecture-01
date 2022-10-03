@@ -16,7 +16,7 @@ export const itemsSlice = createSlice({
     name: 'items',
     initialState: {
         items: null,
-        isLoading: false
+        isLoading: false,
     },
     extraReducers: {
         [getItems.pending]: (state) => {
