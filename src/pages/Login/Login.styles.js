@@ -29,3 +29,8 @@ export const Img = styled.img`
   grid-gap: 20px;
   
   `
+
+export const Gbtn = styled.img`
+  width: 200px;
+  cursor: pointer;
+`
