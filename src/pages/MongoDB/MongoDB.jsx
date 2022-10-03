@@ -9,14 +9,15 @@ export const MongoDB = () => {
     return (
         <PageContainer darkMode={isDark} >
             <Col>
-                <h1>Hi</h1>
-                <p>This client app calls an API on my own NodeJS server which queries a Mongo database. Here are the results (WIP)</p>
+                <h2>Axios -{`>`} Node.Js -{'>'} Mongo DB</h2>
+                <p>This client app calls an API on <b>my own NodeJS server</b> which queries a Mongo database.</p>
+                <p>Here is the response from the server:</p>
                 
                 { !booksLoading ?
                     books.map((book, i) => {
                         return (
                             <div key={i}>
-                                {book.name}
+                                {i}. {book.name}
                             </div>
                         )
                     }

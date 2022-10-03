@@ -9,12 +9,20 @@ export const Home = () => {
     return (
         <PageContainer darkMode={isDark} >
             <Col>
-                <h1>Hi</h1>
-                <p>This app serves as a test for the latest Redux toolkit, React-router and React 18 updates.</p>
-                <p>It also uses Firebase for authentication, AntD and Formik libraries etc...</p>
-                <p>It is a work in progress.</p>
+                <h2>Welcome</h2>
+                <p><b>This app (WIP) serves as a test for the latest versions of:</b></p>
+                <li>Redux toolkit</li>
+                <li>React-router</li>
+                <li>React 18 updates.</li>
+                <p></p>
+                <p><b>It also uses</b> Firebase for authentication, Axios, Styled Components, AntD, Formik etc...</p>
                 <p></p>
                 <p>Make sure to <Link to="/login">login</Link> in order to see all the inner pages and demonstrations</p>
+                <p></p>
+                <p><b>Take a look at some of my other projects:</b></p>
+                <a href="https://health-e.herokuapp.com/#/" target="_blank">Health-e</a>
+                <a href="https://clock-in-demo.herokuapp.com/" target="_blank">Clock-In Demo</a>
+                <a href="https://www.karmanow.com/" target="_blank">Karma Shopping</a>
             </Col>
         </PageContainer>
     )

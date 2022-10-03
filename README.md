@@ -1,12 +1,12 @@
 # Frontend architecture 01
 
-## This FE project was bootstrapped with React, and includes:
+## This FE project includes:
 - Styled components, with components from my own design system
 - React router
 - Redux with redux toolkit
-- Axios service
+- Axios
 - Firebase firestore
 - AntD table
 - Formik form
 
-Live demo: [https://arch-7d083.web.app/](https://arch-7d083.web.app/)
+Live demo: [https://davidmarom.com/](https://davidmarom.com/)
