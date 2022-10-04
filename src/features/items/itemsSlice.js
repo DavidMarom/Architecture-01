@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { fakestoreGet } from '../../services/http'
+import { fakestoreGet } from '../../services/httpFakeStore'
 
 export const getItems = createAsyncThunk(
     'items/getItems', async () => {

@@ -20,22 +20,11 @@ export const AddItemForm = ({ data }) => {
             address: Yup.string().required('Required'),
         }),
         onSubmit: (values, { resetForm }) => {
-            console.log('aaaa')
+            console.log(values)
             resetForm();
-            dispatch(updateItem(values));
+            dispatch(addItemToList(values));
         }
     })
-
-    // const handleCreateNew = (values) => {
-    //     dispatch(addItemToList(
-    //         {
-    //             name: values.name,
-    //             age: values.age,
-    //             address: values.address,
-    //         }
-    //     ));
-    //     dispatch(getList())
-    // }
 
     // const handleUpdateItem = (values) => {
     //     dispatch(updateItem(
@@ -85,15 +74,8 @@ export const AddItemForm = ({ data }) => {
                         {formik.touched.address && formik.errors.address ? (<Error>{formik.errors.address}</Error>) : null}
                     </div>
 
-                    <button type="submit">Edit</button>
+                    <button type="submit">Add</button>
                 </Form>
-
-
-                {/* {items.map((item, idx) => {
-                    return <div key={idx}>
-                        <p>{item.name} - {item.age} - {item.address} - {item.id}</p>
-                    </div>
-                })} */}
 
             </>
         )

@@ -14,8 +14,8 @@ export const AntD = () => {
     return (
         <PageContainer darkMode={isDark} >
             <p>Data in this table is coming from firebase firestore</p>
+            <AddItemForm />
             {editableItem && <AddItemForm data={editableItem} />}
-
             <Table
                 dataSource={dataSource}
                 columns={columns}
