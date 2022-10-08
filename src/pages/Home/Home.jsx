@@ -19,7 +19,7 @@ export const Home = () => {
                 <p></p>
                 <p>Make sure to <Link to="/login">login</Link> in order to see all the inner pages and demonstrations</p>
                 <p></p>
-                <p><b>Take a look at some of my other projects:</b></p>
+                <h3><b>For UI-oriented projects:</b></h3>
                 <a href="https://health-e.herokuapp.com/#/" target="_blank">Health-e</a>
                 <a href="https://clock-in-demo.herokuapp.com/" target="_blank">Clock-In Demo</a>
                 <a href="https://www.karmanow.com/" target="_blank">Karma Shopping</a>

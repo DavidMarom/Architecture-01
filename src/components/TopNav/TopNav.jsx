@@ -22,6 +22,7 @@ export default function TopNav() {
                 {/* <NavLink to="/form" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>Form</p></NavLink> */}
                 <NavLink to="/FakeStore" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>Fake Store</p></NavLink>
                 <NavLink to="/MongoDB" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>MongoDB</p></NavLink>
+                <NavLink to="/Backend" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>Backend</p></NavLink>
             </Row>
             <Row>
                 <Link to="/Login">

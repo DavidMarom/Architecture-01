@@ -13,7 +13,7 @@ export const AntD = () => {
 
     return (
         <PageContainer darkMode={isDark} >
-            <p>Data in this table is coming from firebase firestore</p>
+            <p>This data is stored on a Google Firebase service</p>
             <AddItemForm />
             {editableItem && <AddItemForm data={editableItem} />}
             <Table
