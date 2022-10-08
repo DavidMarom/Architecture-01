@@ -10,3 +10,8 @@
 - Formik form
 
 Live demo: [https://davidmarom.com/](https://davidmarom.com/)
+
+
+## Deploy:
+- Build: `react-scripts build`
+- Deploy: `firebase deploy`
