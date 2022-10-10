@@ -7,9 +7,9 @@ export const Backend = () => {
     const isDark = useSelector(state => state.settings.dark)
 
     const callAPI = () => {
-        const res = fetch('http://157.230.100.93/api/files/add')
+        const res = fetch('https://157.230.100.93/api/files/add')
         res.then(res => res.json())
-            .then(res => window.open('http://157.230.100.93/zip/' + res.file))
+            .then(res => window.open('https://157.230.100.93/zip/' + res.file))
 
                 
     }
