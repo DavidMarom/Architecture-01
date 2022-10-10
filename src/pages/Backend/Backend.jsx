@@ -7,9 +7,9 @@ export const Backend = () => {
     const isDark = useSelector(state => state.settings.dark)
 
     const callAPI = () => {
-        const res = fetch('https://157.230.100.93/api/files/add')
+        const res = fetch('https://davidmaromapi.com/api/files/add')
         res.then(res => res.json())
-            .then(res => window.open('https://157.230.100.93/zip/' + res.file))
+            .then(res => window.open('https://davidmaromapi.com/zip/' + res.file))
 
                 
     }
@@ -22,7 +22,7 @@ return (
             <p>Host: Digital Ocean {`(`}Ubuntu{`)`}</p>
             <p>Server: nginx + systemd</p>
             <p>Process Manager: pm2</p>
-            <p>API: <span><a href="https://documenter.getpostman.com/view/10340861/2s83zguQk7" target="_blank" rel="noreferrer">https://documenter.getpostman.com/view/10340861/2s83zguQk7</a></span></p>
+            <p>API: <span><a href="https://davidmaromapi.com" target="_blank" rel="noreferrer">https://davidmaromapi.com</a></span></p>
 
             <button onClick={callAPI}>Download file</button>
 
