@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageContainer, Col } from './Home.styles'
+import { PageContainer, Col, Row } from './Home.styles'
 import { useSelector } from 'react-redux'
 import { Link } from "react-router-dom";
 
@@ -18,17 +18,27 @@ export const Home = () => {
                 <p><b>It also uses</b> Firebase for authentication, Axios, Styled Components, AntD, Formik etc...</p>
                 <p>Git: <a href="https://github.com/DavidMarom/Architecture-01" target="_blank" rel="noopener noreferrer">https://github.com/DavidMarom/Architecture-01</a></p>
                 <p></p>
-                <p>Make sure to <Link to="/login">login</Link> in order to see all the inner pages and demonstrations</p>
                 <p></p>
-                <h3><b>For UI-oriented projects:</b></h3>
-                <a href="https://health-e.herokuapp.com/#/" target="_blank" rel="noopener noreferrer">Health-e</a>
-                <a href="https://clock-in-demo.herokuapp.com/" target="_blank" rel="noopener noreferrer">Clock-In Demo</a>
-                <a href="https://www.karmanow.com/" target="_blank" rel="noopener noreferrer">Karma Shopping</a>
+                <h3><b>For UI - oriented projects:</b></h3>
+
                 <p></p>
-                <a href="https://davidmarom.com/infrafstructure.png" target="_blank" rel="noopener noreferrer">
-                    <img src="infrastructure.png" alt="infrastructure" width="500px" />
-                </a>
-            </Col>
-        </PageContainer>
+                <Row>
+                    <Col>
+                        <a href="https://www.karmanow.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://res.cloudinary.com/dojmo7vcc/image/upload/v1665567545/davidmarom.com/th02_u3mn6z.png" width="270px" alt="th02" border="0" />
+                        </a>
+                        <p>karmanow.com</p>
+                    </Col>
+
+                    <Col>
+                        <a href="https://health-e.herokuapp.com/#/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://res.cloudinary.com/dojmo7vcc/image/upload/v1665567393/davidmarom.com/th01_o9z1yb.png" width="270px" alt="th01" border="0" />
+                        </a>
+                        <p>Health Events</p>
+                    </Col>
+
+                </Row>
+            </Col >
+        </PageContainer >
     )
 }

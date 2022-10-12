@@ -14,11 +14,14 @@ export const PageContainer = styled.div`
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: start;
+
 `
 
 export const Col = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
+  
+  margin: 5px;
 `

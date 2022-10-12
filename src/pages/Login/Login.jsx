@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageContainer, Gbtn } from './Login.styles'
+import { PageContainer, Gbtn, Button } from './Login.styles'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { setUser, logoutUser } from '../../features/user/userSlice'
@@ -43,7 +43,7 @@ export const Login = () => {
     return (
         <PageContainer darkMode={isDark} >
             {user ?
-                <button onClick={doSignOut}>Logout</button> :
+                <Button onClick={doSignOut}>Logout</Button> :
                 <Gbtn onClick={doSignup} src="sign-in-with-google.png" alt="" />
             }
             {user ?

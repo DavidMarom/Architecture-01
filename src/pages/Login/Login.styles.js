@@ -34,3 +34,11 @@ export const Gbtn = styled.img`
   width: 200px;
   cursor: pointer;
 `
+
+export const Button = styled.button`
+  border:0;
+  margin: 5px;
+  background-color: #00aaff;
+  width: 130px;
+  color: white;
+`
