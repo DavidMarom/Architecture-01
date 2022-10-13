@@ -11,6 +11,7 @@ import { AddItemForm } from './pages/Form/Form'
 import { Home } from './pages/Home/Home'
 import { MongoDB } from './pages/MongoDB/MongoDB'
 import { Backend } from './pages/Backend/Backend'
+import { Storybook } from './pages/Storybook/Storybook'
 import { Login } from './pages/Login/Login'
 import { useDispatch } from 'react-redux'
 import { getList } from './features/list/listSlice'
@@ -33,6 +34,7 @@ function App() {
           <Route path="/antd" element={<AntD />} />
           <Route path="/MongoDB" element={<MongoDB />} />
           <Route path="/Backend" element={<Backend />} />
+          <Route path="/Storybook" element={<Storybook />} />
           <Route path="/login" element={<Login />} />
         </Routes>
       </div>

@@ -1,8 +1,12 @@
 import React from 'react'
-import { Error,Form } from './Form.styles'
+import { Error, Form } from './Form.styles'
 import { getList, addItemToList, updateItem } from '../../features/list/listSlice'
 import { useDispatch } from 'react-redux'
 import { useFormik } from 'formik'
+import { Button } from '../../components/Button/Button'
+import { Input } from './Form.styles'
+
+
 import * as Yup from 'yup'
 
 export const AddItemForm = ({ data }) => {
@@ -33,50 +37,60 @@ export const AddItemForm = ({ data }) => {
     //     dispatch(getList())
     // }
 
-        return (
-            <>
-                <Form onSubmit={formik.handleSubmit}>
+    return (
+        <>
+            <Form onSubmit={formik.handleSubmit}>
 
-                    <div className="imput-container">
-                        <input
-                            id="name"
-                            name="name"
-                            type="text"
-                            placeholder="Name"
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.name}
-                        />
-                        {formik.touched.name && formik.errors.name ? (<Error>{formik.errors.name}</Error>) : null}
-                    </div>
-                    <div className="imput-container">
-                        <input
-                            id="age"
-                            name="age"
-                            type="number"
-                            placeholder="Age"
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.age}
-                        />
-                        {formik.touched.age && formik.errors.age ? (<Error>{formik.errors.age}</Error>) : null}
-                    </div>
-                    <div className="imput-container">
-                        <input
-                            id="address"
-                            name="address"
-                            type="text"
-                            placeholder="address"
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.address}
-                        />
-                        {formik.touched.address && formik.errors.address ? (<Error>{formik.errors.address}</Error>) : null}
-                    </div>
+                <div className="imput-container">
+                    <Input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Name"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.name}
+                    />
+                    {formik.touched.name && formik.errors.name ? (<Error>{formik.errors.name}</Error>) : null}
+                </div>
+                <div className="imput-container">
+                    <Input
+                        id="age"
+                        name="age"
+                        type="number"
+                        placeholder="Age"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.age}
+                    />
+                    {formik.touched.age && formik.errors.age ? (<Error>{formik.errors.age}</Error>) : null}
+                </div>
+                <div className="imput-container">
+                    <Input
+                        id="address"
+                        name="address"
+                        type="text"
+                        placeholder="address"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.address}
+                    />
+                    {formik.touched.address && formik.errors.address ? (<Error>{formik.errors.address}</Error>) : null}
+                </div>
 
-                    <button type="submit">Add</button>
-                </Form>
+                <Button
+                    type="submit"
 
-            </>
-        )
+                    backgroundColor="#3576cc"
+                    label="Submit"
+                    onclick={function noRefCheck() { }}
+                    rounded
+                    size="small"
+                    width={100}
+
+                >Add</Button>
+            </Form>
+
+        </>
+    )
 }

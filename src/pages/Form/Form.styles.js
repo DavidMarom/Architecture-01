@@ -20,4 +20,12 @@ export const Form = styled.form`
 display: flex;
 flex-direction: row;
 justify-content: start;
+margin-bottom: 10px;
+`
+
+export const Input = styled.input`
+  width: 100%;
+  height: 30px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
 `
