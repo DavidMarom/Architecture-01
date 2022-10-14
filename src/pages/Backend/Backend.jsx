@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Col, PageContainer, Input, Button, P, H2 } from './Backend.styles'
 
-
-export const Backend = () => {
+const Backend = () => {
     const isDark = useSelector(state => state.settings.dark)
     const [name, setName] = useState('')
     const callAPI = (name) => {
@@ -34,3 +33,5 @@ export const Backend = () => {
         </PageContainer>
     )
 }
+
+export default Backend

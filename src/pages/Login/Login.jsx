@@ -6,7 +6,7 @@ import { setUser, logoutUser } from '../../features/user/userSlice'
 import { gprovider } from '../../firebase-config'
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 
-export const Login = () => {
+const Login = () => {
     const dispatch = useDispatch();
     const isDark = useSelector(state => state.settings.dark)
     const user = useSelector(state => state.user.user)
@@ -58,3 +58,5 @@ export const Login = () => {
     )
 
 }
+
+export default Login

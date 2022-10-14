@@ -2,10 +2,10 @@ import React from 'react'
 import { PageContainer } from './AntD.styles'
 import { useSelector } from 'react-redux'
 import { Table } from 'antd'
-import { AddItemForm } from '../Form/Form'
+import AddItemForm from '../Form/Form'
 import { columns } from './columns'
 
-export const AntD = () => {
+const AntD = () => {
     const isDark = useSelector(state => state.settings.dark)
     const editableItem = useSelector(state => state.list.editDialog)
     const orgDataSource = useSelector(state => state.list.list)
@@ -35,3 +35,5 @@ export const AntD = () => {
         </PageContainer>
     )
 }
+
+export default AntD

@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { Col, PageContainer } from './MongoDB.styles'
 
-export const MongoDB = () => {
+const MongoDB = () => {
     const books = useSelector(state => state.books.books)
     const booksLoading = useSelector(state => state.books.isLoading)
     const isDark = useSelector(state => state.settings.dark)
@@ -28,3 +28,5 @@ export const MongoDB = () => {
         </PageContainer>
     )
 }
+
+export default MongoDB

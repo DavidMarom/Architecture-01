@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Container, Knoba, Knobb, Symb } from "./Toggle.style"
 
-function Toggle({ color, func, symbol }) {
+export const Toggle = ({ color, func, symbol }) => {
     const [toggle, setToggle] = useState(false)
 
     return (
@@ -11,5 +11,3 @@ function Toggle({ color, func, symbol }) {
         </Container>
     )
 }
-
-export default Toggle

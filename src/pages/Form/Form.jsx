@@ -8,8 +8,7 @@ import { Input } from './Form.styles'
 
 
 import * as Yup from 'yup'
-
-export const AddItemForm = ({ data }) => {
+const AddItemForm = ({ data }) => {
     const dispatch = useDispatch();
     const formik = useFormik({
         initialValues: {
@@ -94,3 +93,5 @@ export const AddItemForm = ({ data }) => {
         </>
     )
 }
+
+export default AddItemForm

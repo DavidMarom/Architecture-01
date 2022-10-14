@@ -10,6 +10,16 @@ export const PageContainer = styled.div`
   height: 80vh;
   padding: 20px;
   background-color: ${({ darkMode }) => (darkMode ? `${DARK}` : `${LIGHT}`)};
+
+  p {
+    margin: 2px;
+    color: ${({ darkMode }) => (darkMode ? `${LIGHT}` : `${DARK}`)};
+  }
+
+  h2 {
+    color: ${({ darkMode }) => (darkMode ? `${LIGHT}` : `${DARK}`)};
+  }
+
 `
 
 export const Row = styled.div`

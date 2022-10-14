@@ -1,15 +1,14 @@
 import React from 'react'
-import { PageContainer, Col, Row } from './Home.styles'
+import { PageContainer, Col, Row} from './Home.styles'
 import { useSelector } from 'react-redux'
-import { Link } from "react-router-dom";
 
-export const Home = () => {
+const Home = () => {
     const isDark = useSelector(state => state.settings.dark)
 
     return (
         <PageContainer darkMode={isDark} >
             <Col>
-                <h2>Welcome</h2>
+                <h2><b>Welcome</b></h2>
                 <p><b>This app (WIP) serves as a test for the latest versions of:</b></p>
                 <li>Redux toolkit</li>
                 <li>React-router</li>
@@ -19,7 +18,7 @@ export const Home = () => {
                 <p>Git: <a href="https://github.com/DavidMarom/Architecture-01" target="_blank" rel="noopener noreferrer">https://github.com/DavidMarom/Architecture-01</a></p>
                 <p></p>
                 <p></p>
-                <h3><b>For UI - oriented projects:</b></h3>
+                <h3 darkMode={isDark}><b>For UI - oriented projects:</b></h3>
 
                 <p></p>
                 <Row>
@@ -34,7 +33,7 @@ export const Home = () => {
                         <a href="https://health-e.herokuapp.com/#/" target="_blank" rel="noopener noreferrer">
                             <img src="https://res.cloudinary.com/dojmo7vcc/image/upload/v1665567393/davidmarom.com/th01_o9z1yb.png" width="270px" alt="th01" border="0" />
                         </a>
-                        <p>Health Events</p>
+                        <p darkMode={isDark}>Health Events</p>
                     </Col>
 
                 </Row>
@@ -42,3 +41,5 @@ export const Home = () => {
         </PageContainer >
     )
 }
+
+export default Home

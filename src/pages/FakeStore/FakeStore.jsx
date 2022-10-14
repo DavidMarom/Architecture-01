@@ -2,7 +2,7 @@ import React from 'react'
 import { PageContainer, Card, Img, ItemsContainer } from './FakeStore.styles'
 import { useSelector } from 'react-redux'
 
-export const FakeStore = () => {
+const FakeStore = () => {
     const isDark = useSelector(state => state.settings.dark)
     const items = useSelector(state => state.items.items)
     const itemsLoading = useSelector(state => state.items.isLoading)
@@ -27,3 +27,5 @@ export const FakeStore = () => {
         </PageContainer>
     )
 }
+
+export default FakeStore
