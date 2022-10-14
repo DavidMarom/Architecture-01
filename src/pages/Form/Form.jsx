@@ -3,7 +3,7 @@ import { Error, Form } from './Form.styles'
 import { getList, addItemToList, updateItem } from '../../features/list/listSlice'
 import { useDispatch } from 'react-redux'
 import { useFormik } from 'formik'
-import { Button } from '../../components/Button/Button'
+import Button from '../../components/Button/Button'
 import { Input } from './Form.styles'
 
 

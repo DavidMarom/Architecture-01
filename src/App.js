@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 
 // Components
 import { TopNav } from './components/TopNav/TopNav'
+import { Footer } from './components/Footer/Footer'
 
 // Pages
 import { AddItemForm, AntD, FakeStore, Home, MongoDB, Backend, Storybook, Login } from "./pages";
@@ -33,6 +34,7 @@ function App() {
         <Route path="/Storybook" element={<Storybook />} />
         <Route path="/login" element={<Login />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

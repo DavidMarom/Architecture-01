@@ -16,9 +16,8 @@ const Home = () => {
                 <p></p>
                 <p><b>It also uses</b> Firebase for authentication, Axios, Styled Components, AntD, Formik etc...</p>
                 <p>Git: <a href="https://github.com/DavidMarom/Architecture-01" target="_blank" rel="noopener noreferrer">https://github.com/DavidMarom/Architecture-01</a></p>
-                <p></p>
-                <p></p>
-                <h3 darkMode={isDark}><b>For UI - oriented projects:</b></h3>
+                <h1></h1><h1></h1><h1></h1>
+                <h3 darkMode={isDark}><b>For UI demonstartion, please see my past projects:</b></h3>
 
                 <p></p>
                 <Row>
@@ -37,6 +36,7 @@ const Home = () => {
                     </Col>
 
                 </Row>
+                
             </Col >
         </PageContainer >
     )

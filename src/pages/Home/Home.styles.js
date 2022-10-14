@@ -8,6 +8,8 @@ export const PageContainer = styled.div`
   flex-direction: column;
   justify-content: start;
   padding: 20px;
+  padding-bottom: 50px;
+  min-height: 80vh;
   background-color: ${({ darkMode }) => (darkMode ? `${DARK}` : `${LIGHT}`)};
 
   p {
