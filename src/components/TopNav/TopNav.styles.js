@@ -11,6 +11,12 @@ export const NavContainer = styled.div`
   background-color: ${({ darkMode }) => (darkMode ? `${DARK}` : `${LIGHT}`)};
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (max-width: 768px) {
+    p{
+      font-size: 7px;
+    }
+  }
 `
 
 export const Img = styled.img`
