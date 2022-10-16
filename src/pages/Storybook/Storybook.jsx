@@ -9,7 +9,7 @@ const Storybook = () => {
 
         <PageContainer darkMode={isDark} >
             <h1>Storybook</h1>
-            <a href="https://6346c29f12cb3212588eb719-kffnupdxfc.chromatic.com/?path=/story/toggle--regular" target="_blank" rel="noreferrer">Link to my Storybook</a>
+            <a href="https://6346c29f12cb3212588eb719-jpfahctadc.chromatic.com/?path=/story/welcome--home" target="_blank" rel="noreferrer">Link to my Storybook</a>
         </PageContainer>
     )
 }

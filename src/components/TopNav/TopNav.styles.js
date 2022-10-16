@@ -12,7 +12,7 @@ export const NavContainer = styled.div`
   padding-left: 20px;
   padding-right: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 612px) {
     p{
       font-size: 7px;
     }

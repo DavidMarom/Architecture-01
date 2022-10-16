@@ -17,7 +17,7 @@ const Home = () => {
                 <p><b>It also uses</b> Firebase for authentication, Axios, Styled Components, AntD, Formik etc...</p>
                 <p>Git: <a href="https://github.com/DavidMarom/Architecture-01" target="_blank" rel="noopener noreferrer">https://github.com/DavidMarom/Architecture-01</a></p>
                 <h1></h1><h1></h1><h1></h1>
-                <h3 darkMode={isDark}><b>For UI demonstartion, please see my past projects:</b></h3>
+                <h3><b>For UI demonstartion, please see my past projects:</b></h3>
 
                 <p></p>
                 <Row>
@@ -32,7 +32,7 @@ const Home = () => {
                         <a href="https://health-e.herokuapp.com/#/" target="_blank" rel="noopener noreferrer">
                             <img src="https://res.cloudinary.com/dojmo7vcc/image/upload/v1665567393/davidmarom.com/th01_o9z1yb.png" width="270px" alt="th01" border="0" />
                         </a>
-                        <p darkMode={isDark}>Health Events</p>
+                        <p>Health Events</p>
                     </Col>
 
                 </Row>
