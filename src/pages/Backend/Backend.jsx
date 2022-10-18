@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { Col, PageContainer, Input, Button, P, H2 } from './Backend.styles'
+import { Col, PageContainer, Input, P, H2 } from './Backend.styles'
+import Button from '../../components/Button/Button'
 
 const Backend = () => {
     const isDark = useSelector(state => state.settings.dark)
@@ -23,7 +24,12 @@ const Backend = () => {
                 <P darkMode={isDark}>Enter your name, the server will append it to template.txt, and will send it to you in Your_File.zip</P>
                 <p></p>
                 <Input type="text" id="name" placeholder="Enter a name" onChange={(ev) => { setName(ev.target.value) }} />
-                <Button onClick={() => callAPI(name)}>Download file</Button>
+                <Button
+                    label="Download file"
+                    width="310px"
+                    rounded="true"
+                    onClick={() => callAPI(name)} />
+
                 <p></p>
 
                 <a href="https://res.cloudinary.com/dojmo7vcc/image/upload/v1665487077/davidmarom.com/infrastructure_yvlbtv.png" target="_blank" rel="noopener noreferrer">

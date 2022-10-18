@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Button2 = styled.button`
-  width: ${({ width }) => width}px;
+  width: ${({ width }) => width};
   height: ${({ size }) => (size === 'small' ? 30 : size === 'medium' ? 50 : 70)}px;
   border-radius: ${({ rounded }) => (rounded ? '50px' : '0')};
   background-color: ${({ backgroundColor }) => backgroundColor};
@@ -11,4 +11,6 @@ export const Button2 = styled.button`
   color: white;
   border: none;
   cursor: pointer;
+  padding-right: 20px;
+  padding-left: 20px;
 `;

@@ -1,14 +1,14 @@
 import PropTypes from "prop-types"
 import { Button2 } from "./Button.style"
 
-export const Button = ({
+function Button({
     label,
     backgroundColor = "#3576cc",
-    onClick,
-    width = 700,
-    size = "medium",
+    width,
+    size = "small",
     rounded = false,
-}) => {
+    onClick
+}) {
 
     return (
         <Button2
@@ -24,10 +24,10 @@ export const Button = ({
 }
 
 Button.propTypes = {
-    onclick: PropTypes.func,
+    onClick: PropTypes.func,
     label: PropTypes.string,
     backgroundColor: PropTypes.string,
-    width: PropTypes.number,
+    width: PropTypes.string,
     size: PropTypes.oneOf(["small", "medium", "large"]),
     rounded: PropTypes.bool
 }
