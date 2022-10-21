@@ -1,11 +1,11 @@
 import { NavContainer, Img, Img2, LoginBtn } from './TopNav.styles'
 import { Row, Col } from '../StyledComponents'
 import { NavLink, Link } from "react-router-dom";
-import { Toggle } from '../Toggle/Toggle'
+import { Toggle } from '../../components'
 import { useDispatch, useSelector } from 'react-redux'
 import { darkToggle } from '../../features/settings/settingsSlice'
 
-export const TopNav=()=> {
+const TopNav=()=> {
     const dispatch = useDispatch()
     const isDark = useSelector(state => state.settings.dark)
     const user = useSelector(state => state.user.user)
@@ -34,3 +34,5 @@ export const TopNav=()=> {
         </NavContainer>
     )
 }
+
+export default TopNav

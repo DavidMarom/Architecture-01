@@ -7,7 +7,6 @@ const FakeStore = () => {
     const items = useSelector(state => state.items.items)
     const itemsLoading = useSelector(state => state.items.isLoading)
 
-    console.log(itemsLoading, 'items loading')
     return (
 
         <PageContainer darkMode={isDark} >
@@ -17,7 +16,7 @@ const FakeStore = () => {
                 {!itemsLoading ? 
                     items.map((item, idx) =>
                         <Card key={idx}>
-                            <Img src={item.image} key={idx} alt="" />
+                            <Img src={item.image ? item.image : '-----'} key={idx} alt="" />
                         </Card>
                     )
                     : 'Loading...'

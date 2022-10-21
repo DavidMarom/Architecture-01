@@ -2,11 +2,8 @@ import React from "react";
 import 'antd/dist/antd.min.css'
 import { Route, Routes } from 'react-router-dom'
 
-// Components
-import { TopNav } from './components/TopNav/TopNav'
-import { Footer } from './components/Footer/Footer'
-
-// Pages
+// Import Components and Pages
+import { TopNav, Footer } from './components'
 import { AddItemForm, AntD, FakeStore, Home, MongoDB, Backend, Storybook, Login } from "./pages";
 
 import { useDispatch } from 'react-redux'

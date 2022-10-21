@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import { FooterContainer } from "./Footer.style"
 
-export const Footer = () => {
+const Footer = () => {
 
     return (
         <FooterContainer>
