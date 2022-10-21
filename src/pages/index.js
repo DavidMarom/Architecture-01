@@ -1,4 +1,3 @@
-export {default as AddItemForm} from './Form/Form'
 export {default as AntD} from './AntD/AntD'
 export {default as FakeStore} from './FakeStore/FakeStore'
 export {default as Home} from './Home/Home'

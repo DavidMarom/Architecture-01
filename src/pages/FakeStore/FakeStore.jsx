@@ -16,7 +16,7 @@ const FakeStore = () => {
                 {!itemsLoading ? 
                     items.map((item, idx) =>
                         <Card key={idx}>
-                            <Img src={item.image ? item.image : '-----'} key={idx} alt="" />
+                            <Img src={item.image} key={idx} alt="" />
                         </Card>
                     )
                     : 'Loading...'

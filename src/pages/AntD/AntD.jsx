@@ -2,7 +2,7 @@ import React from 'react'
 import { PageContainer } from './AntD.styles'
 import { useSelector } from 'react-redux'
 import { Table } from 'antd'
-import AddItemForm from '../Form/Form'
+import { AddItemForm } from '../../components'
 import { columns } from './columns'
 
 const AntD = () => {

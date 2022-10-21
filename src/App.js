@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/fakestore" element={<FakeStore />} />
-        <Route path="/form" element={<AddItemForm />} />
+        {/* <Route path="/form" element={<AddItemForm />} /> */}
         <Route path="/antd" element={<AntD />} />
         <Route path="/MongoDB" element={<MongoDB />} />
         <Route path="/Backend" element={<Backend />} />

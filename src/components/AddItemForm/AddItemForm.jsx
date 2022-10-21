@@ -1,13 +1,12 @@
 import React from 'react'
-import { Error, Form } from './Form.styles'
-import { getList, addItemToList, updateItem } from '../../features/list/listSlice'
+import { Error, Form } from './AddItemForm.styles'
+import { addItemToList, updateItem } from '../../features/list/listSlice'
 import { useDispatch } from 'react-redux'
 import { useFormik } from 'formik'
-import Button from '../../components/Button/Button'
-import { Input } from './Form.styles'
-
-
+import Button from '../Button/Button'
+import { Input } from './AddItemForm.styles'
 import * as Yup from 'yup'
+
 const AddItemForm = ({ data }) => {
     const dispatch = useDispatch();
     const formik = useFormik({
@@ -79,13 +78,12 @@ const AddItemForm = ({ data }) => {
 
                 <Button
                     type="submit"
-
                     backgroundColor="#3576cc"
                     label="Submit"
                     onclick={function noRefCheck() { }}
                     rounded
                     size="small"
-                    width={100}
+                    width="100px"
 
                 >Add</Button>
             </Form>

@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import { Button2 } from "./Button.style"
 
 function Button({
+    type = "button",
     label,
     backgroundColor = "#3576cc",
     width,
@@ -12,7 +13,7 @@ function Button({
 
     return (
         <Button2
-            onClick={onClick}
+            type={type}
             backgroundColor={backgroundColor}
             width={width}
             size={size}
