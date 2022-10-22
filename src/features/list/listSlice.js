@@ -51,6 +51,7 @@ export const listSlice = createSlice({
     },
     reducers: {
         openEditDialog: (state, data) => { state.editDialog = data.payload },
+        closeEditDialog: (state, data) => { state.editDialog = data.payload },
     },
     extraReducers: {
         // getList
@@ -70,7 +71,7 @@ export const listSlice = createSlice({
             state.isLoading = true;
         },
         [updateItem.fulfilled]: (state, action) => {
-            state.list = state.list.map((item) => item.id === action.payload ? { item01: 'aaaaaaaaaa' } : item);
+            state.list = state.list.map((item) => item);
             state.isLoading = false;
         },
         [updateItem.rejected]: (state) => {
@@ -103,6 +104,6 @@ export const listSlice = createSlice({
     }
 })
 
-export const { openEditDialog } = listSlice.actions
+export const { openEditDialog, closeEditDialog } = listSlice.actions
 
 export default listSlice.reducer

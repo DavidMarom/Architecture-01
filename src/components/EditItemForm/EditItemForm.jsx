@@ -1,13 +1,13 @@
 import React from 'react'
-import { Error, Form } from './AddItemForm.styles'
-import { addItemToList } from '../../features/list/listSlice'
+import { Error, Form } from './EditItemForm.styles'
+import { updateItem, getList, closeEditDialog } from '../../features/list/listSlice'
 import { useDispatch } from 'react-redux'
 import { useFormik } from 'formik'
 import Button from '../Button/Button'
-import { Input } from './AddItemForm.styles'
+import { Input } from './EditItemForm.styles'
 import * as Yup from 'yup'
 
-const AddItemForm = ({ data }) => {
+const EditItemForm = ({ data }) => {
     const dispatch = useDispatch();
     const formik = useFormik({
         initialValues: {
@@ -22,9 +22,11 @@ const AddItemForm = ({ data }) => {
             address: Yup.string().required('Required'),
         }),
         onSubmit: (values, { resetForm }) => {
-            console.log(values)
-            resetForm();
-            dispatch(addItemToList(values));
+            dispatch(closeEditDialog())
+            dispatch(updateItem(
+                { ...values, id: data.id }
+            ));
+            dispatch(getList())
         }
     })
 
@@ -72,15 +74,16 @@ const AddItemForm = ({ data }) => {
                 <Button
                     type="submit"
                     backgroundColor="#3576cc"
-                    label="Add"
+                    label="Edit"
                     onclick={function noRefCheck() { }}
                     rounded
                     size="small"
-                    width="100px" />
+                    width="100px"
+                />
             </Form>
 
         </>
     )
 }
 
-export default AddItemForm
+export default EditItemForm

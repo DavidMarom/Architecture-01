@@ -1,21 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { PageContainer } from './AntD.styles'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { getList } from '../../features/list/listSlice'
+
 import { Table } from 'antd'
-import { AddItemForm } from '../../components'
+import { AddItemForm, EditItemForm } from '../../components'
 import { columns } from './columns'
+import { _ } from 'lodash'
 
 const AntD = () => {
+    const dispatch = useDispatch();
+
     const isDark = useSelector(state => state.settings.dark)
     const editableItem = useSelector(state => state.list.editDialog)
     const orgDataSource = useSelector(state => state.list.list)
     const dataSource = orgDataSource.map((item, index) => { return { ...item, key: index } })
 
+
     return (
+
         <PageContainer darkMode={isDark} >
             <p>This data is stored on a Google Firebase service</p>
             <AddItemForm />
-            {editableItem && <AddItemForm data={editableItem} />}
+            {editableItem && <EditItemForm data={editableItem} />}
             <Table
                 dataSource={dataSource}
                 columns={columns}
@@ -34,6 +41,8 @@ const AntD = () => {
             </Table>
         </PageContainer>
     )
+
+
 }
 
 export default AntD

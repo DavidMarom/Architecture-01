@@ -41,8 +41,8 @@ export const columns = [
                 <Popconfirm title="Sure to delete?" onConfirm={() => handleDelete(record.id)}>
                     <Button danger>Delete</Button>
                 </Popconfirm>
-                {/* <Button onClick={() => store.dispatch(openEditDialog(record))
-                }>Edit</Button> */}
+                <Button onClick={() => store.dispatch(openEditDialog(record))
+                }>Edit</Button>
             </>
         )
     }

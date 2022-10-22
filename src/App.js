@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 
 // Import Components and Pages
 import { TopNav, Footer } from './components'
-import { AddItemForm, AntD, FakeStore, Home, MongoDB, Backend, Storybook, Login } from "./pages";
+import { AntD, FakeStore, Home, MongoDB, Backend, Storybook, Login } from "./pages";
 
 import { useDispatch } from 'react-redux'
 
@@ -24,7 +24,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/fakestore" element={<FakeStore />} />
-        {/* <Route path="/form" element={<AddItemForm />} /> */}
         <Route path="/antd" element={<AntD />} />
         <Route path="/MongoDB" element={<MongoDB />} />
         <Route path="/Backend" element={<Backend />} />
