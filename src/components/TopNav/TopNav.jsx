@@ -24,6 +24,7 @@ const TopNav=()=> {
                 <NavLink to="/MongoDB" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>MongoDB</p></NavLink>
                 <NavLink to="/Backend" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>Backend</p></NavLink>
                 <NavLink to="/Storybook" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>Storybook</p></NavLink>
+                <NavLink to="/Next" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>Next.JS</p></NavLink>
             </Row>
             <Row>
                 <Link to="/Login">

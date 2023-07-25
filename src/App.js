@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 
 // Import Components and Pages
 import { TopNav, Footer } from './components'
-import { AntD, FakeStore, Home, MongoDB, Backend, Storybook, Login } from "./pages";
+import { AntD, FakeStore, Home, MongoDB, Backend, Storybook, Login, Next } from "./pages";
 
 import { useDispatch } from 'react-redux'
 
@@ -29,6 +29,7 @@ function App() {
         <Route path="/Backend" element={<Backend />} />
         <Route path="/Storybook" element={<Storybook />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/next" element={<Next />} />
       </Routes>
       <Footer />
     </div>

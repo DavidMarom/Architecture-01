@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageContainer, Col, Row} from './Home.styles'
+import { PageContainer, Col, Row } from './Home.styles'
 import { useSelector } from 'react-redux'
 
 const Home = () => {
@@ -13,6 +13,8 @@ const Home = () => {
                 <li>Redux toolkit</li>
                 <li>React-router</li>
                 <li>React 18 updates.</li>
+                <li>Next.JS (link to other site)</li>
+                <br />
                 <p></p>
                 <p><b>It also uses</b> Firebase for authentication, Axios, Styled Components, AntD, Formik etc...</p>
                 <p>Git: <a href="https://github.com/DavidMarom/Architecture-01" target="_blank" rel="noopener noreferrer">https://github.com/DavidMarom/Architecture-01</a></p>
@@ -34,9 +36,8 @@ const Home = () => {
                         </a>
                         <p>Health Events</p>
                     </Col>
-                    <p>-</p>
                 </Row>
-                
+
             </Col >
         </PageContainer >
     )
