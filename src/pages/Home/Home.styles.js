@@ -17,7 +17,7 @@ export const PageContainer = styled.div`
     color: ${({ darkMode }) => (darkMode ? `${LIGHT}` : `${DARK}`)};
   }
 
-  h2, h3 {
+  h1, h2, h3 {
     color: ${({ darkMode }) => (darkMode ? `${LIGHT}` : `${DARK}`)};
   }
 
