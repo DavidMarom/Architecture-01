@@ -8,8 +8,9 @@ const Next = () => {
     return (
         <PageContainer darkMode={isDark} >
             <h1>Next.JS</h1>
-            <p>Experimenting with Next.JS</p>
-            <a href="https://next-crm-two.vercel.app/" target="_blank" rel="noreferrer"><b>👉 Click here</b></a>
+            <p>Redberry CRM is a project i'm currently working on.</p>
+            <p>It is written with Next.js 14 (latest)</p>
+            <h2>Take a look<b> 👉 </b><a href="https://www.redberry-crm.com/" target="_blank" rel="noreferrer"><b>redberry-crm.com</b></a></h2>
         </PageContainer>
     )
 }
