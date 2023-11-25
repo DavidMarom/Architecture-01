@@ -17,7 +17,13 @@ const Home = () => {
                 <li>Redux toolkit</li>
                 <li>React-router</li>
                 <li>React 18 updates.</li>
-                <li>Next.JS (link to other site)</li>
+                <li>Next.js - take a look at my latest side-project: 
+                    <a
+                        href="https://www.redberry-crm.com"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <b>redberry-crm.com</b>
+                    </a></li>
                 <br />
                 <p></p>
                 <p>
