@@ -14,37 +14,26 @@ const Home = () => {
                 <p>
                     <b>This app (WIP) serves as a test for the latest versions of:</b>
                 </p>
-                <li>Redux toolkit</li>
-                <li>React-router</li>
-                <li>React 18 updates.</li>
-                <li>Next.js - take a look at my latest side-project: 
+                <li>Redux toolkit, React-router, React 18 updates</li>
+                <li>It also uses: Firebase for authentication, Axios, Styled Components, AntD, Formik etc...</li>
+                <p>Git:{" "}<a href="https://github.com/DavidMarom/Architecture-01" target="_blank" rel="noopener noreferrer">https://github.com/DavidMarom/Architecture-01</a></p>
+                <br />
+
+                <h2>Next.js: take a look at my latest side-project:
                     <a
                         href="https://www.redberry-crm.com"
                         target="_blank"
                         rel="noopener noreferrer">
-                        <b>redberry-crm.com</b>
-                    </a></li>
+                        <b> redberry-crm.com</b>
+                    </a></h2>
                 <br />
                 <p></p>
                 <p>
-                    <b>It also uses</b> Firebase for authentication, Axios, Styled
-                    Components, AntD, Formik etc...
                 </p>
-                <p>
-                    Git:{" "}
-                    <a
-                        href="https://github.com/DavidMarom/Architecture-01"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        https://github.com/DavidMarom/Architecture-01
-                    </a>
-                </p>
-                <h1></h1>
                 <h1></h1>
                 <h1></h1>
                 <h3>
-                    <b>For UI demonstartion, please see my past projects:</b>
+                    <b>For UI demonstartion, see my past projects:</b>
                 </h3>
 
                 <p></p>
@@ -71,7 +60,7 @@ const Home = () => {
                     🌈 I'm currently looking for a job as a fullstack / frontend developer
                 </h2>
                 <Row>
-                    <p>I'd be happy to be in touch:</p>
+                    <p>David Marom:</p>
                     <p>054 - 8762043 | </p>
                     <a href="mailto:maromdavid7@gmail.com">
                         maromdavid7@gmail.com
