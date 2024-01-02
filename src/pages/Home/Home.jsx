@@ -28,7 +28,7 @@ const Home = () => {
                         <p><b>karmanow.com</b></p>
                     </Col>
                     <Col>
-                        <a href="https://www.karmanow.com/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.redberry-crm.com/" target="_blank" rel="noopener noreferrer">
                             <img src="https://res.cloudinary.com/dojmo7vcc/image/upload/v1704109984/rb-th_h8bgsc.png" height="150px" alt="th02" border="0" />
                         </a>
                         <p><b>redberry-crm.com</b></p>
