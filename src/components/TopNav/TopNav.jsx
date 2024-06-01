@@ -18,13 +18,14 @@ const TopNav=()=> {
                 </Link>
             </Col>
             <Row>
+                <NavLink to="/" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>Home</p></NavLink>
                 <NavLink to="/antd" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>AntD</p></NavLink>
                 {/* <NavLink to="/form" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>Form</p></NavLink> */}
                 {/* <NavLink to="/FakeStore" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>Fake Store</p></NavLink> */}
-                <NavLink to="/MongoDB" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>MongoDB</p></NavLink>
-                <NavLink to="/Backend" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>Backend</p></NavLink>
+                {/* <NavLink to="/MongoDB" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>MongoDB</p></NavLink> */}
+                {/* <NavLink to="/Backend" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>Backend</p></NavLink> */}
                 <NavLink to="/Storybook" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>Storybook</p></NavLink>
-                <NavLink to="/Next" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>🌟Next.JS</p></NavLink>
+                {/* <NavLink to="/Next" className={(navData) => navData.isActive ? 'active-route' : 'inactive-route'}><p>🌟Next.JS</p></NavLink> */}
             </Row>
             <Row>
                 <Link to="/Login">
