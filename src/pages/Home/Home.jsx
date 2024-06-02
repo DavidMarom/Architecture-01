@@ -10,7 +10,8 @@ const Home = () => {
             <Col>
                 <h2><b>David Marom</b></h2>
                 <p><b>Freelance web developer | available</b></p>
-                <p>GitHub:{" "}<a href="https://github.com/DavidMarom" target="_blank" rel="noopener noreferrer">https://github.com/DavidMarom</a></p>
+                <p>GitHub:{" "}<a href="https://github.com/DavidMarom" target="_blank" rel="noopener">https://github.com/DavidMarom</a></p>
+                <p>LinkedIn:{" "}<a href="https://www.linkedin.com/in/maromdavid/" target="_blank" rel="noopener">https://www.linkedin.com/in/maromdavid/</a></p>
                 <p>054-5779917</p>
                 <br />
                 <br />
