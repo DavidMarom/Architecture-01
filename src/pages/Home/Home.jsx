@@ -37,7 +37,7 @@ const Home = () => {
                 </Row>
                 <br /><br />
                 {/* <br /><br /> */}
-                <h2>Available for work | +972 54 5779917</h2>
+                <h2>Available for work +972 54 5779917</h2>
 
 
             </Col>
