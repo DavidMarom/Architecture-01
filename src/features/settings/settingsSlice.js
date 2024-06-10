@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const settingsSlice = createSlice({
     name: 'settings',
     initialState: {
-        dark: false,
+        dark: true,
         loading: false
     },
     reducers: {

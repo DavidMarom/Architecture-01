@@ -7,7 +7,7 @@ export const NavContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 100px;
+  height: 80px;
   background-color: ${({ darkMode }) => (darkMode ? `${DARK}` : `${LIGHT}`)};
   padding-left: 20px;
   padding-right: 20px;
@@ -35,4 +35,5 @@ export const Img2 = styled.img`
 
 export const LoginBtn = styled.div`
   margin-right: 20px;
+  color: #000;
 `

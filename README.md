@@ -1,4 +1,4 @@
-# Frontend architecture 01
+# davidmarom.com
 
 [https://davidmarom.com/](https://davidmarom.com/)
 

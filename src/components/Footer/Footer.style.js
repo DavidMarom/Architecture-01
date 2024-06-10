@@ -6,13 +6,13 @@ export const FooterContainer = styled.footer`
     justify-content: space-between;
     align-items: start;
     width: 100%;
-    height: 200px;
+    height: 120px;
     background-color: #333333;
     padding: 20px;
 
     p {
         color: #888888;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     @media (max-width: 768px) {

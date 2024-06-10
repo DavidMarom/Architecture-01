@@ -8,14 +8,17 @@ const Home = () => {
     return (
         <PageContainer darkMode={isDark}>
             <Col>
-                <h2><b>David Marom</b></h2>
-                <p><b>Freelance web developer | available</b></p>
+                <h2><b>David Marom</b> | Freelance web developer</h2>
+                <p><b>React, Angular (Typescript)</b>, Next.js, Redux, TanStack, All modern libraries…</p>
+                <p>Node.js (express), Python, Flask, Open api</p>
+                <p>Vue, PHP Laravel, Wordpress</p>
+                <br/>
                 <p>GitHub:{" "}<a href="https://github.com/DavidMarom" target="_blank" rel="noopener">https://github.com/DavidMarom</a></p>
                 <p>LinkedIn:{" "}<a href="https://www.linkedin.com/in/maromdavid/" target="_blank" rel="noopener">https://www.linkedin.com/in/maromdavid/</a></p>
                 <p>054-5779917</p>
                 <br />
                 <br />
-                <h3><b>Past projects:</b></h3>
+                <h3><b>Some of my projects:</b></h3>
                 <Row>
                     <Col>
                         <a href="https://www.karmanow.com/" target="_blank" rel="noopener noreferrer">
@@ -33,8 +36,10 @@ const Home = () => {
 
                 </Row>
                 <br /><br />
-                <br /><br />
-                
+                {/* <br /><br /> */}
+                <h2>Available for work | +972 54 5779917</h2>
+
+
             </Col>
         </PageContainer>
     );
